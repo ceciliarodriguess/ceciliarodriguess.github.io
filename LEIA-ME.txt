@@ -1,0 +1,18 @@
+SITE CECILIA RODRIGUES
+
+index.html   -> site do cliente (agendamento + carrinho)
+admin.html   -> painel da Cecilia (agendamentos, servicos, disponibilidade, site)
+schema.sql   -> banco de dados (rodar no Supabase: SQL Editor)
+imagens/     -> fotos dos resultados (r01 a r12), ja colocadas no carrossel
+
+Antes de publicar:
+1. (JA FEITO) Banco criado no Supabase com schema.sql.
+2. Authentication > criar o usuario da Cecilia (e-mail e senha) e desativar cadastro aberto.
+3. (JA FEITO) URL e chave publica ja estao nos dois arquivos.
+4. Colocar o numero de WhatsApp pelo painel (aba Site) ou na linha WHATSAPP do index.html.
+5. Subir tudo no GitHub Pages.
+Enquanto SB_URL nao for trocado, os dois arquivos funcionam em modo demonstracao.
+
+ATENCAO: rodar tambem atualizar-servicos.sql no Supabase (SQL Editor) para colocar os precos reais:
+Maquiagem Social 130 | Design Simples 40 | Design com Henna 50 | Design com Tintura 50 | Brow Lamination 130 | Lash Lifting 150.
+Buco fica escondido ate confirmar o valor.
