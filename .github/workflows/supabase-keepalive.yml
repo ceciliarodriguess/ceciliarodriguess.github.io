@@ -1,0 +1,25 @@
+name: Supabase Cecilia - Keep Alive
+
+on:
+  schedule:
+    - cron: '15 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Consultar Supabase
+        env:
+          SUPABASE_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          curl --fail --silent --show-error \
+            --max-time 30 \
+            "https://wulsyjfmrsrzgvrjqvxy.supabase.co/rest/v1/services?select=id&limit=1" \
+            -H "apikey: $SUPABASE_KEY" \
+            -o /dev/null
+          echo "Consulta realizada com sucesso."
